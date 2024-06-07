@@ -1,8 +1,32 @@
-# Applescript
-Applescripts I have written for fun.
-Open Ollama: Runs a shell script to run the web UI for the Ollama server and then opens it in the browser. 
-Close Ollama: Kills all processes using the specified port for the Ollama server. 
-Open Stable Diffusion: Runs the Stable Diffusion web server and opens it in the browser. 
-Close Stable Diffusion: Kills all processes using the specified port number on the Stable Diffusion server. 
-AI Messages: By far the most impressive. The AppleScript checks the chat.db file stored on the computer for the latest sent message by finding the max ROWID. If it starts with [ollama], it gets the message and runs a shell script for the AI to respond to the text message. Once it responds, it kills the Ollama server and sends the message to the target phone number. 
-checksformsgs.sh: For automation, checks every 60 seconds if there are any changes made to the chat.db file, and if there are, it runs the AI Messages AppleScript. 
+# AppleScript Fun Projects
+
+Welcome to my collection of fun and experimental AppleScripts!
+
+## Projects Overview
+
+### Open Ollama
+This script runs a shell command to start the Ollama server's web UI and then opens it in your default web browser.
+
+### Close Ollama
+Terminates all processes using the specified port for the Ollama server, effectively shutting it down.
+
+### Open Stable Diffusion
+Launches the Stable Diffusion web server and opens the interface in your browser for easy access.
+
+### Close Stable Diffusion
+Shuts down the Stable Diffusion server by killing all processes using the specified port.
+
+### AI Messages
+This is the most advanced script in the collection. It:
+1. Checks the `chat.db` file on your computer for the latest sent message by identifying the highest `ROWID`.
+2. If the message starts with `[ollama]`, it extracts the message.
+3. Runs a shell script to get an AI response to the message.
+4. Sends the AI-generated response to the target phone number.
+5. Finally, it shuts down the Ollama server.
+
+### checksformsgs.sh
+For automation purposes, this script checks every 60 seconds for any changes in the `chat.db` file. If a change is detected, it triggers the AI Messages AppleScript.
+
+---
+
+Feel free to explore, modify, and have fun with these scripts!
